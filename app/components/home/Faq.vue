@@ -5,8 +5,6 @@ import type { Collections } from '@nuxt/content'
 const route = useRoute()
 const { locale } = useI18n()
 
-console.log(route.params)
-
 const slug = computed(() => withLeadingSlash(String(route.params.slug)))
 const { data: faq } = await useAsyncData('faq-' + slug.value, async () => {
   const collection = ('faq_' + locale.value) as keyof Collections
@@ -24,8 +22,6 @@ const items = computed(() => {
     }
   })
 })
-
-console.log(items.value)
 
 const ui = {
   root: 'flex items-center gap-4 w-full',

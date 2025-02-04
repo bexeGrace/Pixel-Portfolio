@@ -97,7 +97,7 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       { code: 'en', name: 'English', language: 'en-US' },
-      { code: 'fr', name: 'French', language: 'fr-FR' },
+      { code: 'fr', name: 'Dutch', language: 'nl-Nl' },
     ],
     detectBrowserLanguage: {
       useCookie: true,
@@ -105,7 +105,7 @@ export default defineNuxtConfig({
       redirectOn: 'root',
     },
     strategy: 'prefix',
-    defaultLocale: 'en',
+    defaultLocale: 'fr',
     baseUrl: '/',
     vueI18n: '~/i18n.config.ts',
   },
