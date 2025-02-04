@@ -10,7 +10,7 @@ const stack = await queryCollection('stack').first()
         mdc-unwrap="p"
       />
     </h1>
-    <h2 class="text-center text-lg font-extralight italic text-muted">
+    <h2 class="text-center text-lg font-extralight italic text-white/60">
       <slot
         name="subtitle"
         mdc-unwrap="p"
@@ -20,10 +20,10 @@ const stack = await queryCollection('stack').first()
     <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
       <AboutProfilePicture />
       <div class="relative flex flex-col gap-3 sm:ml-4">
-        <h3 class="text-lg">
+        <h3 class="text-lg text-white">
           Intro
         </h3>
-        <div class="flex flex-col gap-4 text-primary">
+        <div class="flex flex-col gap-4 text-white/60">
           <slot
             name="intro"
             mdc-unwrap="p"
@@ -35,7 +35,7 @@ const stack = await queryCollection('stack').first()
     </div>
     <Divider class="my-8" />
     <slot
-      name="experiences"
+      name="team"
       mdc-unwrap="p"
     />
     <Divider class="my-8" />
