@@ -19,7 +19,7 @@ export default defineAppConfig({
   },
   seo: {
     title: 'Pixel Software and IT consultancy',
-    description: 'Canvas is a simple but beautiful portfolio template for designers and developers built with Nuxt and Tailwind CSS. Made with ❤️ by HugoRCD',
+    description: 'Pixel is a cutting-edge software development company specializing in innovative digital solutions. We craft high-performance applications, intuitive user interfaces, and scalable systems tailored to meet modern business needs. With a focus on precision and creativity, our team of experts transforms ideas into seamless technology, ensuring efficiency, security, and exceptional user experiences. Whether it\'s web, mobile, or enterprise software, Pixel delivers future-ready solutions with a passion for excellence.',
     url: 'https://canvas.hrcd.fr',
   },
   ui: {

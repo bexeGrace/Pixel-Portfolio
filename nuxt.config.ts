@@ -26,13 +26,13 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://canvas.hrcd.fr',
-    defaultLocale: 'en',
+    defaultLocale: 'fr',
     indexable: true,
   },
 
   colorMode: {
-    preference: 'dark',
-    fallback: 'dark',
+    preference: 'white',
+    fallback: 'white',
   },
 
   content: {

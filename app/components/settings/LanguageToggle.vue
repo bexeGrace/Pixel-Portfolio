@@ -25,7 +25,7 @@ const switchLocalePath = useSwitchLocalePath()
           class="font-semibold"
           :class="locale.code === currentLocale?.code ? 'text-white' : 'text-neutral-500'"
         >
-          {{ locale.code }}
+          {{ locale.code === 'en' ? "EN" : "DUT" }}
         </span>
       </NuxtLink>
       <template #fallback>
