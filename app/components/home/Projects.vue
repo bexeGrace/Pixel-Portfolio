@@ -36,7 +36,7 @@ const { data: projects } = await useAsyncData('projects', async () => {
       </NuxtLink>
     </div>
     <NuxtLinkLocale to="/works">
-      <span class="font-newsreader italic text-white cursor-pointer">
+      <span class="font-newsreader italic text-white/60 cursor-pointer">
         {{ $t("global.see_more") }}
       </span>
     </NuxtLinkLocale>

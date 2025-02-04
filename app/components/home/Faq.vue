@@ -5,6 +5,8 @@ import type { Collections } from '@nuxt/content'
 const route = useRoute()
 const { locale } = useI18n()
 
+console.log(route.params)
+
 const slug = computed(() => withLeadingSlash(String(route.params.slug)))
 const { data: faq } = await useAsyncData('faq-' + slug.value, async () => {
   const collection = ('faq_' + locale.value) as keyof Collections
@@ -23,15 +25,17 @@ const items = computed(() => {
   })
 })
 
+console.log(items.value)
+
 const ui = {
   root: 'flex items-center gap-4 w-full',
-  list: 'relative flex bg-transparent dark:bg-transparent gap-2',
-  indicator: 'absolute top-[4px] duration-200 ease-out focus:outline-none rounded-full bg-white/10 dark:bg-neutral-900',
+  list: 'relative flex bg-transparent dark:bg-transparent gap-2 text-white',
+  indicator: 'absolute top-[4px] duration-200 ease-out focus:outline-none rounded-full bg-white/10 dark:bg-neutral-900 text-white',
   trigger: [
     'relative inline-flex items-center justify-center flex-shrink-0 focus:outline-none transition-colors duration-200 ease-out border-white/10 border-2',
     'px-3 py-2 font-medium rounded-full',
     'hover:bg-neutral-900/80',
-    'data-[state=active]:text-neutral-900 dark:data-[state=active]:text-white',
+    'data-[state=active]:text-white dark:data-[state=active]:text-white',
     'data-[state=inactive]:text-neutral-500 dark:data-[state=inactive]:text-neutral-400',
   ],
   label: 'truncate',
@@ -58,7 +62,7 @@ const ui = {
           trailing-icon="lucide:plus"
           :items="item.questions"
           :ui="{
-            item: 'mb-2 group px-4 transform-gpu rounded-xl border border-white/10 bg-white/5 text-white/60 transition duration-500 will-change-transform hover:bg-white/[0.075]',
+            item: 'mb-2 group px-4 transform-gpu rounded-xl border border-white/10 bg-white/5 text-white/60 hover:text-white transition duration-500 will-change-transform hover:bg-white/[0.075]',
             trailingIcon: 'group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-135',
           }"
         />
