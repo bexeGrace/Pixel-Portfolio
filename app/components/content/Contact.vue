@@ -56,7 +56,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         mdc-unwrap="p"
       />
     </h1>
-    <h2 class="text-center text-lg font-extralight italic text-muted">
+    <h2 class="text-center text-lg font-extralight italic text-white/60">
       <slot
         name="subtitle"
         mdc-unwrap="p"
@@ -67,7 +67,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <UForm
         :state
         :schema
-        class="flex w-full max-w-[40rem] flex-col gap-3"
+        class="flex w-full max-w-[40rem] flex-col gap-3 bg-black"
         @submit="onSubmit"
       >
         <UFormField
@@ -79,7 +79,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
             v-model="state.fullname"
             type="text"
             autocomplete="name"
-            class="w-full"
+            class="w-full bg-white/60"
             placeholder="John Doe"
           />
         </UFormField>
