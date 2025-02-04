@@ -4,7 +4,7 @@ const stack = await queryCollection('stack').first()
 
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20 text-[var(--ui-text-toned)]">
-    <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
+    <h1 class="font-newsreader italic text-white text-center text-4xl">
       <slot
         name="title"
         mdc-unwrap="p"
@@ -41,7 +41,7 @@ const stack = await queryCollection('stack').first()
     <Divider class="my-8" />
     <div class="flex flex-col gap-3">
       <div class="mb-6 flex flex-col gap-1">
-        <h3 class="text-white-shadow font-newsreader italic text-3xl">
+        <h3 class="text-white font-newsreader italic text-3xl">
           <slot
             name="stack_title"
             mdc-unwrap="p"

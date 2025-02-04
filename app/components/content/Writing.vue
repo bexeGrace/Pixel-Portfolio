@@ -40,7 +40,7 @@ const toggleTag = (tag: string) => {
 
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
-    <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
+    <h1 class="font-newsreader italic text-white text-center text-4xl">
       <slot
         name="title"
         mdc-unwrap="p"
@@ -55,7 +55,7 @@ const toggleTag = (tag: string) => {
     <Divider class="mb-8 mt-2" />
     <div :class="showSearch ? '' : 'mb-3'">
       <span
-        class="font-newsreader italic text-white-shadow cursor-pointer select-none text-lg"
+        class="font-newsreader italic text-white cursor-pointer select-none text-lg"
         @click="showSearch = !showSearch"
       >
         {{ showSearch ? $t("writing.hide_search") : $t("writing.show_search") }}

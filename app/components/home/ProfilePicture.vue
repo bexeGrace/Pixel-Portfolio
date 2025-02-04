@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { profile } = useAppConfig()
+// const { profile } = useAppConfig()
 </script>
 
 <template>
@@ -10,7 +10,7 @@ const { profile } = useAppConfig()
       >
         <NuxtImg
           width="96"
-          :src="profile.picture"
+          src="/images/pixelPP.enc"
           class="size-24 rounded-full border-2 border-neutral-800/30 object-cover"
           alt="Hugo Richard Profile Picture"
           aria-label="Hugo Richard Profile Picture"

@@ -13,13 +13,13 @@ const { data: projects } = await useAsyncData('projects', async () => {
 
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
-    <h1 class="font-newsreader italic text-white-shadow text-center text-4xl">
+    <h1 class="font-newsreader italic text-white text-center text-4xl">
       <slot
         name="title"
         mdc-unwrap="p"
       />
     </h1>
-    <h2 class="text-center text-lg font-extralight italic text-muted">
+    <h2 class="text-center text-lg font-extralight italic text-white/60">
       <slot
         name="subtitle"
         mdc-unwrap="p"

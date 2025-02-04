@@ -13,7 +13,7 @@ const { data: projects } = await useAsyncData('projects', async () => {
 
 <template>
   <div class="flex w-full flex-col gap-6">
-    <h3 class="font-newsreader italic text-white-shadow text-xl">
+    <h3 class="font-newsreader italic text-white text-xl">
       {{ $t("navigation.works") }}
     </h3>
     <div class="flex w-full flex-col gap-4">
@@ -26,17 +26,17 @@ const { data: projects } = await useAsyncData('projects', async () => {
         :aria-label="'go to ' + project.name + ' project website'"
         :target="project.release === 'soon' ? '_self' : '_blank'"
       >
-        <span class="whitespace-nowrap font-medium">
+        <span class="whitespace-nowrap font-medium text-white/60">
           {{ project.name }}
         </span>
         <div class="mx-2 h-[0.1px] w-full bg-muted" />
-        <span class="whitespace-nowrap">
+        <span class="whitespace-nowrap text-white/60">
           {{ project.release === "soon" ? $t("global.soon") + "..." : project.release }}
         </span>
       </NuxtLink>
     </div>
     <NuxtLinkLocale to="/works">
-      <span class="font-newsreader italic text-white-shadow cursor-pointer">
+      <span class="font-newsreader italic text-white cursor-pointer">
         {{ $t("global.see_more") }}
       </span>
     </NuxtLinkLocale>
