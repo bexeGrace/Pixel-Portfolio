@@ -4,13 +4,13 @@ const stack = await queryCollection('stack').first()
 
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20 text-[var(--ui-text-toned)]">
-    <h1 class="font-newsreader italic text-white text-center text-4xl">
+    <h1 class="font-newsreader italic text-center text-4xl">
       <slot
         name="title"
         mdc-unwrap="p"
       />
     </h1>
-    <h2 class="text-center text-lg font-extralight italic text-white/60">
+    <h2 class="text-center text-lg font-extralight italic">
       <slot
         name="subtitle"
         mdc-unwrap="p"
@@ -20,10 +20,10 @@ const stack = await queryCollection('stack').first()
     <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
       <AboutProfilePicture />
       <div class="relative flex flex-col gap-3 sm:ml-4">
-        <h3 class="text-lg text-white">
+        <h3 class="text-lg">
           Intro
         </h3>
-        <div class="flex flex-col gap-4 text-white/60">
+        <div class="flex flex-col gap-4">
           <slot
             name="intro"
             mdc-unwrap="p"

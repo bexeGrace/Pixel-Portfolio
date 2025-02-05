@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/scripts',
+    '@nuxtjs/color-mode',
   ],
 
   imports: {
@@ -31,8 +32,9 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    preference: 'white',
-    fallback: 'white',
+    preference: 'system', // Default mode ('light', 'dark', or 'system')
+    fallback: 'light', // If system mode is not detected, default to light
+    classSuffix: '',
   },
 
   content: {

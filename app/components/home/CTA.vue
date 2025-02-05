@@ -17,7 +17,7 @@ const { t } = useI18n()
             {{ t("global.contact") }}
             <UIcon
               name="heroicons-envelope"
-              class="size-5 text-white/80"
+              class="size-5 dark:text-white/80"
             />
           </NuxtLinkLocale>
         </SpotlightButton>

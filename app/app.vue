@@ -8,7 +8,7 @@ const { locale } = useI18n()
 <template>
   <Html
     :lang="locale"
-    class="font-geist text-white transition-colors duration-300 selection:bg-white/60 selection:text-zinc-800 bg-black"
+    class="font-geist text-white transition-colors duration-300 selection:bg-white/60 selection:text-zinc-80"
   >
     <Body>
       <LayoutScrollToTop />
