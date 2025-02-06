@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import ThemeToggle from './ThemeToggle.vue'
+
 defineProps({
   isText: {
     type: Boolean,
@@ -40,6 +42,7 @@ const localePath = useLocalePath()
               class="size-7 font-light sm:size-6"
             />
           </NuxtLink>
+          <ThemeToggle />
         </nav>
       </SpotlightButton>
     </header>

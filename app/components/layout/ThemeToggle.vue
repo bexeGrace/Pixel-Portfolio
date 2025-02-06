@@ -7,7 +7,10 @@ const toggleTheme = () => {
 </script>
 
 <template>
-  <button @click="toggleTheme">
-    {{ colorMode.value === 'dark' ? '🌙 Dark Mode' : '☀️ Light Mode' }}
+  <button
+    class="px-4"
+    @click="toggleTheme"
+  >
+    {{ colorMode.value === 'dark' ? '🌙' : '☀️' }}
   </button>
 </template>

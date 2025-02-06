@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import ThemeToggle from '../layout/ThemeToggle.vue'
 </script>
 
 <template>
@@ -7,7 +6,6 @@ import ThemeToggle from '../layout/ThemeToggle.vue'
     <!-- grid -->
     <div class="pointer-events-none absolute inset-0 bg-center bg-grid-white/10 bg-grid-16 [mask-image:radial-gradient(white,transparent_85%)]" />
 
-    <ThemeToggle />
     <div class="relative mx-auto flex max-w-7xl flex-col justify-center gap-4 px-4 py-8 sm:px-6 lg:px-8 lg:py-16">
       <!-- spotlight -->
       <div

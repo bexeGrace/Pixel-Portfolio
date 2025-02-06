@@ -46,40 +46,52 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
   }
   loading.value = false
 }
+
+const uiN = {
+  root: '',
+  wrapper: '',
+  labelWrapper: '',
+  label: 'dark:text-white/60',
+  container: '',
+  error: '',
+  help: '',
+}
 </script>
 
 <template>
   <section class="mx-auto mt-4 flex max-w-4xl flex-col p-7 sm:mt-20">
-    <h1 class="font-newsreader italic text-white text-center text-4xl">
+    <h1 class="font-newsreader dark:text-white italic text-center text-4xl">
       <slot
         name="title"
         mdc-unwrap="p"
       />
     </h1>
-    <h2 class="text-center text-lg font-extralight italic text-white/60">
+    <h2 class="text-center text-lg font-extralight italic dark:text-white/60">
       <slot
         name="subtitle"
         mdc-unwrap="p"
       />
     </h2>
     <Divider class="mb-8 mt-2" />
-    <div class="flex flex-col sm:items-center sm:justify-between">
+    <div class="flex flex-col sm:items-center sm:justify-between dark:text-white">
       <UForm
         :state
         :schema
-        class="flex w-full max-w-[40rem] flex-col gap-3 bg-black"
+        class="flex w-full max-w-[40rem] flex-col gap-3 dark:text-white/60"
         @submit="onSubmit"
       >
         <UFormField
           label="Fullname"
           name="fullname"
+          class="dark:text-white/60"
+          :ui="uiN"
           required
         >
           <UInput
             v-model="state.fullname"
             type="text"
             autocomplete="name"
-            class="w-full bg-white/60"
+            class="w-full"
             placeholder="John Doe"
           />
         </UFormField>
@@ -87,6 +99,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         <UFormField
           label="Email"
           name="email"
+          :ui="uiN"
           required
         >
           <UInput
@@ -100,6 +113,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         <UFormField
           label="Phone"
           name="phone"
+          :ui="uiN"
         >
           <UInput
             v-model="state.phone"
@@ -112,6 +126,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         <UFormField
           label="Subject"
           name="subject"
+          :ui="uiN"
           required
         >
           <UInput
@@ -124,6 +139,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         <UFormField
           label="Message"
           name="message"
+          :ui="uiN"
           required
         >
           <UTextarea
@@ -153,7 +169,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <Divider class="my-10" />
       <div class="flex w-full flex-col items-center justify-between gap-4 sm:flex-row">
         <div class="flex flex-col gap-3">
-          <dd class="flex items-center gap-3 text-neutral-400">
+          <dd class="flex items-center gap-3">
             <UIcon
               name="heroicons-phone"
               class="size-6"
@@ -163,7 +179,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
               {{ profile.phone }}
             </span>
           </dd>
-          <dd class="flex items-center gap-3 text-neutral-400">
+          <dd class="flex items-center gap-3">
             <UIcon
               name="heroicons-envelope"
               class="size-6"
